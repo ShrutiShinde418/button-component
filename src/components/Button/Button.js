@@ -1,12 +1,21 @@
-import React, { Fragment } from "react";
-import classes from "./Button.module.css";
+import React from "react";
+import ButtonHeading from "../ButtonHeading/ButtonHeading";
+import "./Button.scss";
+var classNames = require("classnames");
 
-const Button = () => {
+const Button = (props) => {
+  console.log(props.disabled);
   return (
-    <main className={classes.main}>
-      <h2>Buttons</h2>
-      <button className={classes.btn}>Button</button>
-    </main>
+    <div>
+      <ButtonHeading title={props.title} class={props.headingClass} />
+      <button
+        type="button"
+        className={classNames(props.class)}
+        disabled={props.disabled}
+      >
+        {props.content}
+      </button>
+    </div>
   );
 };
 

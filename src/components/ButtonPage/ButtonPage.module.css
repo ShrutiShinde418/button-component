@@ -4,8 +4,11 @@
   margin: 2.25rem 0 0 5rem;
 }
 
-.btn {
-  align-self: self-start;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+  margin-bottom: 3rem;
 }
 
 h2 {

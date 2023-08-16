@@ -1,13 +1,13 @@
 import "./App.css";
 import { Fragment } from "react";
 import SideBar from "./components/SideBar/SideBar";
-import Button from "./components/Button/Button";
+import ButtonsPage from "./components/ButtonPage/ButtonPage";
 
 function App() {
   return (
     <div className="app">
       <SideBar />
-      <Button />
+      <ButtonsPage />
     </div>
   );
 }

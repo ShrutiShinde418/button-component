@@ -1,0 +1,68 @@
+.btn-sm {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.6rem;
+  font-family: "Noto Sans JP";
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.default {
+  @extend .btn-sm;
+  background-color: var(--button-gray1);
+  color: var(--black4);
+}
+
+.blue {
+  @extend .btn-sm;
+  background-color: var(--blue1);
+  color: var(--white);
+}
+
+.default:hover,
+.default:focus,
+.default-grey {
+  @extend .default;
+  background-color: var(--gray4);
+}
+
+.drop-shadow-default {
+  filter: drop-shadow(0px 2px 3px rgba(51, 51, 51, 0.04));
+}
+
+.outline-blue {
+  @extend .btn-sm;
+  color: var(--blue1);
+  background-color: var(--white);
+  border: 1px solid var(--blue1);
+}
+
+.outline-blue:hover,
+.outline-blue:focus,
+.default-blue {
+  @extend .outline-blue;
+  background-color: var(--blue2);
+}
+
+.text {
+  @extend .btn-sm;
+  background-color: var(--white);
+  filter: none;
+  color: var(--blue1);
+}
+
+.text-hover {
+  @extend .text;
+  background-color: rgba(41, 98, 255, 0.1);
+}
+
+.disabled-default {
+  @extend .btn-sm;
+  background-color: var(--button-gray1);
+  color: var(--gray1);
+}
+
+.disabled-text {
+  @extend .text;
+  color: var(--gray1);
+}
