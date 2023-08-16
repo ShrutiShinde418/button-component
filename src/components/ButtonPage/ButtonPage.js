@@ -6,7 +6,7 @@ const ButtonsPage = () => {
   return (
     <main className={classes.main}>
       <h2>Buttons</h2>
-      <div className={classes.grid}>
+      <div className={classes["grid-1"]}>
         <Button
           content="Default"
           class="default drop-shadow"
@@ -20,7 +20,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes.grid}>
+      <div className={classes["grid-1"]}>
         <Button
           content="Default"
           class="outline-blue"
@@ -34,7 +34,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes.grid}>
+      <div className={classes["grid-1"]}>
         <Button
           content="Default"
           class="text"
@@ -48,7 +48,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes.grid}>
+      <div className={classes["grid-1"]}>
         <Button
           content="Default"
           class="blue"
@@ -56,7 +56,7 @@ const ButtonsPage = () => {
           headingClass="heading"
         />
       </div>
-      <div className={classes.grid}>
+      <div className={classes["grid-1"]}>
         <Button
           content="Disabled"
           class="disabled-default"
@@ -70,6 +70,22 @@ const ButtonsPage = () => {
           title='<Button variant="text" disabled />'
           headingClass="state"
           disabled={true}
+        />
+      </div>
+      <div className={classes["grid-1"]}>
+        <Button
+          content="Default"
+          class="primary row-reverse"
+          icon={true}
+          title='<Button startIcon="local_grocery_store" />'
+          headingClass="heading"
+        />
+        <Button
+          content="Default"
+          class="primary row"
+          icon={true}
+          title='<Button endIcon="local_grocery_store" />'
+          headingClass="state"
         />
       </div>
     </main>

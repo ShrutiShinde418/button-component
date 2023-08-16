@@ -51,7 +51,9 @@
   color: var(--blue1);
 }
 
-.text-hover {
+.text-hover,
+.text:hover,
+.text:focus {
   @extend .text;
   background-color: rgba(41, 98, 255, 0.1);
 }
@@ -65,4 +67,22 @@
 .disabled-text {
   @extend .text;
   color: var(--gray1);
+}
+
+.primary {
+  @extend .btn-sm;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.row-reverse {
+  @extend .row;
+  flex-direction: row-reverse;
 }
