@@ -1,25 +1,21 @@
 import React from "react";
-import classes from "./SideBar.module.css";
+import "./SideBar.scss";
 
 const links = ["Colors", "Typography", "Spaces", "Buttons", "Inputs", "Grid"];
 
 const SideBar = () => {
   return (
-    <nav className={classes.sidebar}>
+    <nav className="sidebar">
       <h1>
         <span>Dev</span>challenges.io
       </h1>
-      <ul className={classes.navbar}>
+      <ul className="navbar">
         {links.map((link) => {
           return (
             <li>
               <a
                 href="#"
-                className={
-                  link === "Buttons"
-                    ? `${classes.navLink} ${classes.active}`
-                    : classes.navLink
-                }
+                className={link === "Buttons" ? "navLink active" : "navLink"}
               >
                 {link}
               </a>

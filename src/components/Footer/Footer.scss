@@ -11,13 +11,17 @@ footer {
   color: var(--gray4);
   font-weight: 500;
   margin-left: 0.2rem;
-}
 
-footer a,
-footer a:hover,
-footer a:active,
-footer a:focus,
-footer a:visited {
-  font-weight: 700;
-  color: var(--gray4);
+  a {
+    font-weight: 700;
+    color: var(--gray4);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      font-weight: 700;
+      color: var(--gray4);
+    }
+  }
 }

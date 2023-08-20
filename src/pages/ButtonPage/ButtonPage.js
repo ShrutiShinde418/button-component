@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
-import classes from "./ButtonPage.module.css";
+// import classes from "./ButtonPage.module.css";
+import "./ButtonPage.scss";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 
 const ButtonsPage = () => {
   return (
-    <main className={classes.main}>
+    <main className="main">
       <h2>Buttons</h2>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Default"
           class="default drop-shadow"
@@ -21,7 +22,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Default"
           class="outline-blue"
@@ -35,7 +36,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Default"
           class="text"
@@ -49,7 +50,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Default"
           class="blue"
@@ -57,7 +58,7 @@ const ButtonsPage = () => {
           headingClass="heading"
         />
       </div>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Disabled"
           class="disabled-default"
@@ -73,7 +74,7 @@ const ButtonsPage = () => {
           disabled={true}
         />
       </div>
-      <div className={classes["grid-1"]}>
+      <div className="grid-1">
         <Button
           content="Default"
           class="primary-sm row-reverse"
@@ -89,7 +90,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
-      <div className={classes["grid-2"]}>
+      <div className="grid-2">
         <Button
           content="Default"
           class="primary-sm drop-shadow-blue"
@@ -109,7 +110,7 @@ const ButtonsPage = () => {
           headingClass="heading"
         />
       </div>
-      <div className={classes["grid-2"]}>
+      <div className="grid-2">
         <Button
           content="Default"
           class="default drop-shadow"
@@ -135,7 +136,7 @@ const ButtonsPage = () => {
           headingClass="heading"
         />
       </div>
-      <div className={classes["grid-2"]}>
+      <div className="grid-2">
         <Button
           content="Default"
           class="default-grey"
