@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import classes from "./ButtonPage.module.css";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
+import Footer from "../../components/Footer/Footer";
 
 const ButtonsPage = () => {
   return (
@@ -160,6 +161,7 @@ const ButtonsPage = () => {
           headingClass="state"
         />
       </div>
+      <Footer />
     </main>
   );
 };

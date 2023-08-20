@@ -1,7 +1,7 @@
 import "./App.css";
 import { Fragment } from "react";
 import SideBar from "./components/SideBar/SideBar";
-import ButtonsPage from "./components/ButtonPage/ButtonPage";
+import ButtonsPage from "./pages/ButtonPage/ButtonPage";
 
 function App() {
   return (

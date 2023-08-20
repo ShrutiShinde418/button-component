@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./ButtonHeading.module.css";
+import "./ButtonHeading.scss";
 
 const ButtonHeading = (props) => {
-  return <p className={classes[props.class]}>{props.title}</p>;
+  return <p className={props.class}>{props.title}</p>;
 };
 
 export default ButtonHeading;

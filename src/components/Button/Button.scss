@@ -35,6 +35,10 @@
   @extend .btn-sm;
   background-color: var(--blue1);
   color: var(--white);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-hover);
+  }
 }
 
 .default-grey {
@@ -63,10 +67,12 @@
   color: var(--blue1);
   background-color: var(--white);
   border: 1px solid var(--blue1);
+  &:hover,
+  &:focus {
+    background-color: var(--blue2);
+  }
 }
 
-.outline-blue:hover,
-.outline-blue:focus,
 .default-blue {
   @extend .outline-blue;
   background-color: var(--blue2);
@@ -77,11 +83,13 @@
   background-color: var(--white);
   filter: none;
   color: var(--blue1);
+  &:hover,
+  &:focus {
+    background-color: rgba(41, 98, 255, 0.1);
+  }
 }
 
-.text-hover,
-.text:hover,
-.text:focus {
+.text-hover {
   @extend .text;
   background-color: rgba(41, 98, 255, 0.1);
 }
@@ -101,18 +109,30 @@
   @extend .btn-sm;
   background-color: var(--primary);
   color: var(--white);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-hover);
+  }
 }
 
 .primary-md {
   @extend .btn-md;
   background-color: var(--primary);
   color: var(--white);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-hover);
+  }
 }
 
 .primary-lg {
   @extend .btn-lg;
   background-color: var(--primary);
   color: var(--white);
+  &:hover,
+  &:focus {
+    background-color: var(--primary-hover);
+  }
 }
 
 .primary-focus {
@@ -125,6 +145,10 @@
   @extend .btn-sm;
   color: var(--white);
   background-color: var(--secondary);
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-hover);
+  }
 }
 
 .secondary-focus {
@@ -137,6 +161,10 @@
   @extend .btn-sm;
   color: var(--white);
   background-color: var(--danger);
+  &:hover,
+  &:focus {
+    background-color: var(--danger-hover);
+  }
 }
 
 .danger-focus {
