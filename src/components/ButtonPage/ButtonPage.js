@@ -75,16 +75,88 @@ const ButtonsPage = () => {
       <div className={classes["grid-1"]}>
         <Button
           content="Default"
-          class="primary row-reverse"
+          class="primary-sm row-reverse"
           icon={true}
           title='<Button startIcon="local_grocery_store" />'
           headingClass="heading"
         />
         <Button
           content="Default"
-          class="primary row"
+          class="primary-sm row"
           icon={true}
           title='<Button endIcon="local_grocery_store" />'
+          headingClass="state"
+        />
+      </div>
+      <div className={classes["grid-2"]}>
+        <Button
+          content="Default"
+          class="primary-sm drop-shadow-blue"
+          title='<Button size="sm" />'
+          headingClass="heading"
+        />
+        <Button
+          content="Default"
+          class="primary-md drop-shadow-blue"
+          title='<Button size="md" />'
+          headingClass="heading"
+        />
+        <Button
+          content="Default"
+          class="primary-lg drop-shadow-blue"
+          title='<Button size="lg" />'
+          headingClass="heading"
+        />
+      </div>
+      <div className={classes["grid-2"]}>
+        <Button
+          content="Default"
+          class="default drop-shadow"
+          title='<Button color="default"/>'
+          headingClass="heading"
+        />
+        <Button
+          content="Default"
+          class="primary-sm"
+          title='<Button color="primary" />'
+          headingClass="heading"
+        />
+        <Button
+          content="Secondary"
+          class="secondary-sm"
+          title='<Button color="secondary" />'
+          headingClass="heading"
+        />
+        <Button
+          content="Danger"
+          class="danger-sm"
+          title='<Button color="danger" />'
+          headingClass="heading"
+        />
+      </div>
+      <div className={classes["grid-2"]}>
+        <Button
+          content="Default"
+          class="default-grey"
+          title="&:hover, &:focus"
+          headingClass="state"
+        />
+        <Button
+          content="Default"
+          class="primary-focus"
+          title=""
+          headingClass="state"
+        />
+        <Button
+          content="Secondary"
+          class="secondary-focus"
+          title=""
+          headingClass="state"
+        />
+        <Button
+          content="Danger"
+          class="danger-focus"
+          title=""
           headingClass="state"
         />
       </div>

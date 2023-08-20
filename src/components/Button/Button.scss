@@ -1,16 +1,34 @@
-.btn-sm {
+.btn {
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.6rem;
+  border-radius: 0.5rem;
   font-family: "Noto Sans JP";
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.btn-sm {
+  @extend .btn;
+  padding: 0.7rem 1.25rem;
+}
+
+.btn-md {
+  @extend .btn;
+  padding: 0.8rem 1.5rem;
+}
+
+.btn-lg {
+  @extend .btn;
+  padding: 0.9rem 1.75rem;
 }
 
 .default {
   @extend .btn-sm;
   background-color: var(--button-gray1);
   color: var(--black4);
+  &:hover,
+  &:focus {
+    background-color: var(--default-hover);
+  }
 }
 
 .blue {
@@ -19,15 +37,25 @@
   color: var(--white);
 }
 
-.default:hover,
-.default:focus,
 .default-grey {
   @extend .default;
-  background-color: var(--gray4);
+  background-color: var(--default-hover);
 }
 
 .drop-shadow-default {
   filter: drop-shadow(0px 2px 3px rgba(51, 51, 51, 0.04));
+}
+
+.drop-shadow-blue {
+  filter: drop-shadow(0px 2px 3px rgba(0, 49, 202, 0.04));
+}
+
+.drop-shadow-primary {
+  filter: drop-shadow(0px 2px 3px rgba(41, 98, 255, 0.04));
+}
+
+.drop-shadow-secondary {
+  filter: drop-shadow(0px 2px 3px rgba(69, 90, 100, 0.04));
 }
 
 .outline-blue {
@@ -69,10 +97,52 @@
   color: var(--gray1);
 }
 
-.primary {
+.primary-sm {
   @extend .btn-sm;
   background-color: var(--primary);
   color: var(--white);
+}
+
+.primary-md {
+  @extend .btn-md;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.primary-lg {
+  @extend .btn-lg;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.primary-focus {
+  @extend .primary-sm;
+  background-color: var(--primary-hover);
+  margin-top: 2rem;
+}
+
+.secondary-sm {
+  @extend .btn-sm;
+  color: var(--white);
+  background-color: var(--secondary);
+}
+
+.secondary-focus {
+  @extend .secondary-sm;
+  background-color: var(--secondary-hover);
+  margin-top: 2rem;
+}
+
+.danger-sm {
+  @extend .btn-sm;
+  color: var(--white);
+  background-color: var(--danger);
+}
+
+.danger-focus {
+  @extend .danger-sm;
+  background-color: var(--danger-hover);
+  margin-top: 2rem;
 }
 
 .row {

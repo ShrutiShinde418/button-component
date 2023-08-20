@@ -16,7 +16,7 @@ const SideBar = () => {
               <a
                 href="#"
                 className={
-                  link === "Inputs"
+                  link === "Buttons"
                     ? `${classes.navLink} ${classes.active}`
                     : classes.navLink
                 }
