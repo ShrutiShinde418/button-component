@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-// import classes from "./ButtonPage.module.css";
+import React from "react";
 import "./ButtonPage.scss";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
@@ -11,13 +10,13 @@ const ButtonsPage = () => {
       <div className="grid-1">
         <Button
           content="Default"
-          class="default drop-shadow"
+          class="default drop-shadow-default"
           title="<Button />"
           headingClass="heading"
         />
         <Button
           content="Default"
-          class="default-grey"
+          class="default-grey drop-shadow-default"
           title="&:hover, &:focus"
           headingClass="state"
         />
@@ -77,14 +76,14 @@ const ButtonsPage = () => {
       <div className="grid-1">
         <Button
           content="Default"
-          class="primary-sm row-reverse"
+          class="primary-sm row-reverse drop-shadow-blue"
           icon={true}
           title='<Button startIcon="local_grocery_store" />'
           headingClass="heading"
         />
         <Button
           content="Default"
-          class="primary-sm row"
+          class="primary-sm row drop-shadow-blue"
           icon={true}
           title='<Button endIcon="local_grocery_store" />'
           headingClass="state"
@@ -99,7 +98,7 @@ const ButtonsPage = () => {
         />
         <Button
           content="Default"
-          class="primary-md drop-shadow-blue"
+          class="primary-md drop-shadow-black"
           title='<Button size="md" />'
           headingClass="heading"
         />
@@ -113,25 +112,25 @@ const ButtonsPage = () => {
       <div className="grid-2">
         <Button
           content="Default"
-          class="default drop-shadow"
+          class="default drop-shadow-default"
           title='<Button color="default"/>'
           headingClass="heading"
         />
         <Button
           content="Default"
-          class="primary-sm"
+          class="primary-sm drop-shadow-primary"
           title='<Button color="primary" />'
           headingClass="heading"
         />
         <Button
           content="Secondary"
-          class="secondary-sm"
+          class="secondary-sm drop-shadow-secondary"
           title='<Button color="secondary" />'
           headingClass="heading"
         />
         <Button
           content="Danger"
-          class="danger-sm"
+          class="danger-sm drop-shadow-danger"
           title='<Button color="danger" />'
           headingClass="heading"
         />
@@ -139,25 +138,25 @@ const ButtonsPage = () => {
       <div className="grid-2">
         <Button
           content="Default"
-          class="default-grey"
+          class="default-grey drop-shadow-default"
           title="&:hover, &:focus"
           headingClass="state"
         />
         <Button
           content="Default"
-          class="primary-focus"
+          class="primary-focus drop-shadow-primary"
           title=""
           headingClass="state"
         />
         <Button
           content="Secondary"
-          class="secondary-focus"
+          class="secondary-focus drop-shadow-secondary"
           title=""
           headingClass="state"
         />
         <Button
           content="Danger"
-          class="danger-focus"
+          class="danger-focus drop-shadow-danger"
           title=""
           headingClass="state"
         />

@@ -1,3 +1,14 @@
+@import "./drop-shadows";
+@import "./flex";
+$padding-sm: 0.7rem 1.25rem;
+$padding-md: 0.8rem 1.5rem;
+$padding-lg: 0.9rem 1.75rem;
+$sizes: (
+  "sm": $padding-sm,
+  "md": $padding-md,
+  "lg": $padding-lg,
+);
+
 .btn {
   border: none;
   border-radius: 0.5rem;
@@ -6,19 +17,11 @@
   font-weight: 500;
 }
 
-.btn-sm {
-  @extend .btn;
-  padding: 0.7rem 1.25rem;
-}
-
-.btn-md {
-  @extend .btn;
-  padding: 0.8rem 1.5rem;
-}
-
-.btn-lg {
-  @extend .btn;
-  padding: 0.9rem 1.75rem;
+@each $size, $value in $sizes {
+  .btn-#{$size} {
+    @extend .btn;
+    padding: $value;
+  }
 }
 
 .default {
@@ -27,9 +30,15 @@
   color: var(--black4);
   &:hover,
   &:focus {
-    background-color: var(--default-hover);
+    @extend .default-grey;
   }
 }
+
+.default-grey {
+  @extend .default;
+  background-color: var(--default-hover);
+}
+
 
 .blue {
   @extend .btn-sm;
@@ -39,27 +48,6 @@
   &:focus {
     background-color: var(--primary-hover);
   }
-}
-
-.default-grey {
-  @extend .default;
-  background-color: var(--default-hover);
-}
-
-.drop-shadow-default {
-  filter: drop-shadow(0px 2px 3px rgba(51, 51, 51, 0.04));
-}
-
-.drop-shadow-blue {
-  filter: drop-shadow(0px 2px 3px rgba(0, 49, 202, 0.04));
-}
-
-.drop-shadow-primary {
-  filter: drop-shadow(0px 2px 3px rgba(41, 98, 255, 0.04));
-}
-
-.drop-shadow-secondary {
-  filter: drop-shadow(0px 2px 3px rgba(69, 90, 100, 0.04));
 }
 
 .outline-blue {
@@ -171,16 +159,4 @@
   @extend .danger-sm;
   background-color: var(--danger-hover);
   margin-top: 2rem;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.row-reverse {
-  @extend .row;
-  flex-direction: row-reverse;
 }

@@ -14,7 +14,7 @@ const SideBar = () => {
           return (
             <li>
               <a
-                href="#"
+                href="/#"
                 className={link === "Buttons" ? "navLink active" : "navLink"}
               >
                 {link}

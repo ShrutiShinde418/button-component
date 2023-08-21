@@ -1,0 +1,22 @@
+$default-shadow: rgba(51, 51, 51, 0.04);
+$blue-shadow: rgba(0, 49, 202, 0.04);
+$primary-shadow: rgba(41, 98, 255, 0.04);
+$secondary-shadow: rgba(69, 90, 100, 0.04);
+$danger-shadow: rgba(211, 47, 47, 0.04);
+$black-shadow: rgba(0, 0, 0, 0.04);
+
+$shadows: (
+  "default": $default-shadow,
+  "blue": $blue-shadow,
+  "primary": $primary-shadow,
+  "secondary": $secondary-shadow,
+  "danger": $danger-shadow,
+  "black": $black-shadow,
+);
+
+@each $name, $color in $shadows {
+  .drop-shadow-#{$name} {
+    filter: drop-shadow(0 2px 3px $color);
+  }
+}
+
