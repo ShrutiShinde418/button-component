@@ -1,5 +1,7 @@
 @import "./drop-shadows";
 @import "./flex";
+@import "../../App";
+
 $padding-sm: 0.7rem 1.25rem;
 $padding-md: 0.8rem 1.5rem;
 $padding-lg: 0.9rem 1.75rem;
@@ -26,8 +28,8 @@ $sizes: (
 
 .default {
   @extend .btn-sm;
-  background-color: var(--button-gray1);
-  color: var(--black4);
+  background-color: $button-gray1;
+  color: $black4;
   &:hover,
   &:focus {
     @extend .default-grey;
@@ -36,41 +38,40 @@ $sizes: (
 
 .default-grey {
   @extend .default;
-  background-color: var(--default-hover);
+  background-color: $default-hover;
 }
-
 
 .blue {
   @extend .btn-sm;
-  background-color: var(--blue1);
-  color: var(--white);
+  background-color: $blue1;
+  color: $white;
   &:hover,
   &:focus {
-    background-color: var(--primary-hover);
+    background-color: $primary-hover;
   }
 }
 
 .outline-blue {
   @extend .btn-sm;
-  color: var(--blue1);
-  background-color: var(--white);
-  border: 1px solid var(--blue1);
+  color: $blue1;
+  background-color: $white;
+  border: 1px solid $blue1;
   &:hover,
   &:focus {
-    background-color: var(--blue2);
+    background-color: $blue2;
   }
 }
 
 .default-blue {
   @extend .outline-blue;
-  background-color: var(--blue2);
+  background-color: $blue2;
 }
 
 .text {
   @extend .btn-sm;
-  background-color: var(--white);
+  background-color: $white;
   filter: none;
-  color: var(--blue1);
+  color: $blue1;
   &:hover,
   &:focus {
     background-color: rgba(41, 98, 255, 0.1);
@@ -84,79 +85,61 @@ $sizes: (
 
 .disabled-default {
   @extend .btn-sm;
-  background-color: var(--button-gray1);
-  color: var(--gray1);
+  background-color: $button-gray1;
+  color: $gray1;
 }
 
 .disabled-text {
   @extend .text;
-  color: var(--gray1);
+  color: $gray1;
 }
 
-.primary-sm {
-  @extend .btn-sm;
-  background-color: var(--primary);
-  color: var(--white);
-  &:hover,
-  &:focus {
-    background-color: var(--primary-hover);
-  }
-}
-
-.primary-md {
-  @extend .btn-md;
-  background-color: var(--primary);
-  color: var(--white);
-  &:hover,
-  &:focus {
-    background-color: var(--primary-hover);
-  }
-}
-
-.primary-lg {
-  @extend .btn-lg;
-  background-color: var(--primary);
-  color: var(--white);
-  &:hover,
-  &:focus {
-    background-color: var(--primary-hover);
+@each $size, $value in $sizes {
+  .primary-#{$size} {
+    @extend .btn-#{$size};
+    background-color: $primary;
+    color: $white;
+    &:hover,
+    &:focus {
+      background-color: $primary-hover;
+    }
   }
 }
 
 .primary-focus {
   @extend .primary-sm;
-  background-color: var(--primary-hover);
+  background-color: $primary-hover;
   margin-top: 2rem;
 }
 
 .secondary-sm {
   @extend .btn-sm;
-  color: var(--white);
-  background-color: var(--secondary);
+  color: $white;
+  background-color: $secondary;
   &:hover,
   &:focus {
-    background-color: var(--secondary-hover);
+    background-color: $secondary-hover;
   }
 }
 
 .secondary-focus {
   @extend .secondary-sm;
-  background-color: var(--secondary-hover);
+  background-color: $secondary-hover;
   margin-top: 2rem;
 }
 
 .danger-sm {
   @extend .btn-sm;
-  color: var(--white);
-  background-color: var(--danger);
+  color: $white;
+  background-color: $danger;
   &:hover,
   &:focus {
-    background-color: var(--danger-hover);
+    background-color: $danger-hover;
   }
 }
 
 .danger-focus {
   @extend .danger-sm;
-  background-color: var(--danger-hover);
+  background-color: $danger-hover;
   margin-top: 2rem;
 }
