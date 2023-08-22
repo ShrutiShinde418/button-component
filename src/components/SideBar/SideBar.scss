@@ -4,6 +4,12 @@
   background-color: $light-gray;
   padding: 2.5rem 5rem 3rem 3.5rem;
   min-height: 100vh;
+
+  @media (min-width: 576px) and (max-width: 1200px) {
+    & {
+      padding: 2.5rem 3rem 3rem 3rem;
+    }
+  }
 }
 
 h1 {
