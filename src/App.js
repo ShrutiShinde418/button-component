@@ -1,5 +1,5 @@
+import React from "react";
 import "./App.scss";
-import { Fragment } from "react";
 import SideBar from "./components/SideBar/SideBar";
 import ButtonsPage from "./pages/ButtonPage/ButtonPage";
 
